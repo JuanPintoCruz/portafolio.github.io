@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <nav>
+            <a href="#presentacion">Presentación</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="box">
+            <img class="box--img" src="img/robot.gif" alt="Robot">
+            <button class="box--button" onclick="toggleChat()">Abrir chat</button>
+            <div class="chat-container" id="chat-container" style="display: none;">
+                <div class="chat">
+                    <p>Buenos días, ¿en qué puedo ayudarte?</p>
+                    <div class="options">
+                        <p>Selecciona una opción:</p>
+                        <p>1. Saber más sobre el programador Juan Pinto</p>
+                        <p>2. Ver la experiencia de Juan Pinto</p>
+                        <p>3. Quieres saber el número de su WhatsApp y su correo electrónico?</p>
+                        <input type="text" id="userInput" placeholder="Escribe tu opción...">
+                        <button onclick="sendOption()">Enviar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay" onclick="closeChat()"></div>
+            <span class="close-button" onclick="closeChat()">X</span>
+        </div>
+        
+        <script>
+            function sendOption() {
+                var userInput = document.getElementById('userInput').value;
+                var option = parseInt(userInput);
+                if (option >= 1 && option <= 3) {
+                    clearMessages();
+                    showResponse(option);
+                } else {
+                    displayMessage("Por favor, selecciona una opción válida (1, 2 o 3).");
+                }
+            }
+        
+            function showResponse(option) {
+                var message;
+                switch (option) {
+                    case 1:
+                        message = "Juan Pinto es un programador junior con habilidades en varios lenguajes de programación como php,javascript y diseño boostrap html y css.";
+                        break;
+                    case 2:
+                        message = "La experiencia de Juan Pinto en la empresa de Centro de Seguridad Internacional  5 meses haciendo practicas  de Enero hasta la Junio del 2024  pero estoy en busca de nuevas oportunidades laborales.";
+                        break;
+                    case 3:
+                        message = "El número de Juan Pinto es 974199589. El correo de Juan Pinto es juanpintocruz123@gmail.com";
+                        break;
+                    default:
+                        message = "Lo siento, no entendí tu pregunta.";
+                }
+                displayMessage(message);
+                displayBackButton(); // Mostrar el botón "Regresar"
+            }
+        
+            function clearMessages() {
+                var chatDiv = document.querySelector('.chat');
+                chatDiv.innerHTML = ''; // Eliminar todos los elementos hijos del contenedor de chat
+            }
+        
+            function displayMessage(message) {
+                var chatDiv = document.querySelector('.chat');
+                var para = document.createElement('p');
+                para.textContent = message;
+                chatDiv.appendChild(para);
+            }
+        
+            function displayBackButton() {
+                var chatDiv = document.querySelector('.chat');
+                var backButton = document.createElement('button');
+                backButton.textContent = "Regresar";
+                backButton.onclick = function() {
+                    window.location.href = "index.html"; // Redirigir al archivo index.html
+                };
+                chatDiv.appendChild(backButton);
+            }
+        
+            function toggleChat() {
+                var chatContainer = document.getElementById('chat-container');
+                chatContainer.style.display = chatContainer.style.display === 'none' ? 'block' : 'none';
+            }
+        
+            function closeChat() {
+                var chatContainer = document.getElementById('chat-container');
+                chatContainer.style.display = 'none';
+            }
+        </script>
+<section id="presentacion">
+         <!-- Inicio primero -->
+    <div class="inicio">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-2 text-center">
+                <br>
+                <img class="img-juan" src="img/juan.jpg" alt="juan">
+                <!-- <p class="title-nombre">Juan Carlos Pinto Cruz</p> -->
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-7">
+                <br>
+                <div>
+                    <p class="title-one text-center">Desarrollador de Software</p>
+                    <h2  style="font-size:20px;color: rgb(236, 222, 222); "class="title-two">Hola, soy Juan Carlos Pinto Cruz, estudiante de Desarrollo de Software estoy cursando el 6to ciclo . 
+                        Soy desarrollador Full Stack (backend y frontend) y estoy en busca de una oportunidad laboral para aplicar
+                         y expandir mis conocimientos. Me apasiona la tecnología y estoy
+                         dispuesto a aprender y adaptarme a nuevas tecnologías en un entorno competitivo. Estoy comprometido 
+                         a contribuir y colaborar con equipos para alcanzar objetivos comunes y laborales </h2>
+                </div>
+                <div class="button text-center">
+                    <a download="CV.pdf" href="cv/CVORIGINAL.pdf">Descargar CV</a>
+                </div>      
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </div>
+   <br><br><br> <br> <br>
+     <!-- Inicio segundo -->
+     <div class="container">
+        <div class="row justify-content-center">
+            <!-- primer -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="text-center"  style="padding: 15px;box-sizing: border-box;">
+                    <div class="cuadro-2">
+                            <br>
+                            <div class="img-1">
+                            <img src="img/imagen1.png" style="width: 50px;height: 50px;" alt="">
+                            </div>
+                            <br>
+                        <div class="info" >
+                            <div  class="title" style="color:#EF2F2F;font-weight: bold;">
+                                Desarrollador web.  
+                            </div>
+                            <br>
+                            <div  class="subtitle" style="color:black;">
+                                Realizo paginas web para 
+                                los clientes responsivas 
+                                y creativas con funcionamiento 
+                                de las paginas .
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- primer -->
+            <!-- segundo -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="text-center"   style="padding: 15px;box-sizing: border-box;">
+                    <div class="cuadro-2">
+                            <br>
+                            <div class="img-2">
+                                <img src="img/imagen2.png" style="width: 50px;height: 50px;" alt="">
+                            </div>
+                            <br>
+                        <div class="info" >
+                            <div  class="title" style="color:#EF2F2F;font-weight: bold;">
+                                Desarrollador de Software.  
+                            </div>
+                            <br>
+                            <div  class="subtitle"style="color:black;">
+                                Realizo Softwares necesario para
+                                una empresa pequeña o un pequeño 
+                                negocio con todo 
+                                lo necesario.
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- segundo -->
+            <!-- tercero -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="text-center"   style="padding: 15px;box-sizing: border-box;">
+                    <div class="cuadro-2">
+                            <br>
+                            <div class="img-3">
+                                <img src="img/imagen3.png" style="width: 50px;height: 50px;" alt="">
+                            </div>
+                            <br>
+                        <div class="info" >
+                            <div  class="title" style="color:#EF2F2F;font-weight: bold;">
+                                Diseñador web  
+                            </div>
+                            <br>
+                            <div class="subtitle" style="color:black;">
+                                Diseño paginas webs
+                                para de ahi programarlas
+                                asi para tener un mejor vision 
+                                y  asi poder  guiarme.
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- tercero -->       
+        </div>    <!-- row -->
+    </div>    <!-- container -->
+</section>
+<br><br><br>
+
+<section id="habilidades">
+    <br><br><br>
+    <div class="container">
+        <div class="row text-center ">
+            <h1 class="text-center">Habilidades </h1>
+            <br><br> <br>
+
+            <!-- Primera fila -->
+            <div class="col-md-4">
+                <ul class="list-unstyled">
+                    <li class="profile__skill">
+                        <div class="load-bar">
+                            <div class="load-bar__bar bar--70" >70%</div>
+                        </div>
+                        <span class="profile__skill-name">HTML</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-unstyled">
+                    <li class="profile__skill">
+                        <div class="load-bar">
+                            <div class="load-bar__bar bar--65">65%</div>
+                        </div>
+                        <span class="profile__skill-name">CSS</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-unstyled">
+                    <li class="profile__skill">
+                        <div class="load-bar">
+                            <div class="load-bar__bar bar--60">60%</div>
+                        </div>
+                        <span class="profile__skill-name">Bootstrap</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br>  
+        <div class="row text-center">
+            <!-- Segunda fila -->
+            <div class="col-md-4">
+                <ul class="list-unstyled">
+                    <li class="profile__skill">
+                        <div class="load-bar">
+                            <div class="load-bar__bar bar--55">55%</div>
+                        </div>
+                        <span class="profile__skill-name">PHP</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-unstyled">
+                    <li class="profile__skill">
+                        <div class="load-bar">
+                            <div class="load-bar__bar bar--50">50%</div>
+                        </div>
+                        <span class="profile__skill-name">JavaScript</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-unstyled">
+                    <li class="profile__skill">
+                        <div class="load-bar">
+                            <div class="load-bar__bar bar--52">52%</div>
+                        </div>
+                        <span class="profile__skill-name">SQL(MYSQL)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br>  
+        <div class="row text-center">
+            <h1 class="text-center">Extras</h1>
+            <br><br> <br>
+            <!-- Tercera fila -->
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-4">
+                <ul class="list-unstyled">
+                    <li class="profile__skill">
+                        <div class="load-bar">
+                            <div class="load-bar__bar bar--35">35%</div>
+                        </div>
+                        <span class="profile__skill-name">Git</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+        <br>  
+        <div class="row text-center">
+            <h1 class="text-center">Diseño</h1>
+            <br><br> <br>
+            <!-- Cuarta fila -->
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <ul class="list-unstyled">
+                    <li class="profile__skill">
+                        <div class="load-bar">
+                            <div class="load-bar__bar bar--48">48%</div>
+                        </div>
+                        <span class="profile__skill-name">Figma</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+    <br><br>
+</section>
+<br> <br> <br>
+<!-- ************Proyectos laborales **************** -->
+<section id="proyectos">
+      <br><br><br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1 class="titulo1 text-center">Proyectos Laborales</h1>
+            <br><br><br><br>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <div class="cuadro-2">
+                    <div class="cuadro-3" style="background-color: #0D85F2;">
+                        <br>
+                        <img src="img/proyecto/proyecto1.png"   height="180vh" width="90%" alt="">
+                        <br><br>
+                    </div>
+                    <br>
+                    <div class="cuadro-4 text-center">
+                        <br>
+                        <h7 class="parrafo" style="font-size: 22px;">
+                            Pagina web para una agencia de Viajes Galaxy. 
+                            Tecnologías: 
+                            HTML + 
+                            CSS + JAVASCRIPT + BOOSTRAP.
+                        </h7>
+                        <br>
+                        <br>
+                        <div class="d-flex justify-content-center">
+                            <a href="https://galaxyentertainmentperu.com/"  target="_blank" class="btn btn-sm btn-primary mx-2" style="border-radius: 15px;"> <h9> Ver Pagina </h9> <img src="img/click.png" width="22" height="22" alt=""></a>
+                            <a href="https://github.com/JuanPintoCruz/Galaxy-Agencia" target="_blank" class="btn btn-sm btn-danger mx-2" style="border-radius: 15px;"> <h9>Ver codigo </h9> <img src="img/git.png" width="22" height="22" alt=""></a>
+                        </div>
+                    </div>
+                     <br>      
+                </div>
+            </div>
+            <div class="col-12 col-sm-6  col-md-6 col-lg-4">
+                <div class="cuadro-2">
+                    <div class="cuadro-3" style="background-color: #0D85F2;">
+                        <br>
+                        <img src="img/proyecto/proyecto2.png"  height="180vh"   width="90%" alt="">
+                        <br><br>
+                    </div>
+                     <br>
+                    <div class="cuadro-4">
+                        <br>
+                             <h7 class="parrafo" style="font-size: 22px;">
+                                Pagina web de una 
+                                clínica de radiología dental.
+                                Tecnologias: 
+                                Html + PHP + CSS + JAVASCRIPT +BOOSTRAP.
+                             </h7>
+                             <br>
+                             <br>
+                             <div class="d-flex justify-content-center">
+                                 <a href="https://cedidentdigital.com/" target="_blank" class="btn btn-sm btn-primary mx-2" style="border-radius: 15px;"> <h9> Ver Pagina </h9> <img src="img/click.png" width="22" height="22" alt=""></a>
+                                 <a href="https://github.com/JuanPintoCruz/radiolog-a-dental" target="_blank" class="btn btn-sm btn-danger mx-2" style="border-radius: 15px;"> <h9>Ver codigo </h9> <img src="img/git.png" width="22" height="22" alt=""></a>
+                             </div>
+                             <br>
+                     </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <div class="cuadro-2">
+                    <div class="cuadro-3" style="background-color: #0D85F2;">
+                        <br>
+                        <img src="img/proyecto/proyecto3.png"  height="180vh"   width="90%" alt="">
+                        <br> <br>
+                    </div>
+                      <br>
+                    <div class="cuadro-4">
+                        <br> 
+                             <h7 class="parrafo" style="font-size: 22px;">
+                                Pagina web  para un Centro   Veterinario.
+                                Tecnologias:
+                                Html + PHP + CSS 
+                                + JAVASCRIPT +BOOSTRAP.
+                             </h7>
+                             <br>
+                             <br>
+                             <div class="d-flex justify-content-center">
+                                 <a href="https://vetfact.csifact.com/" class="btn btn-sm btn-primary mx-2" target="_blank" style="border-radius: 15px;"> <h9> Ver Pagina </h9> <img src="img/click.png" width="22" height="22" alt=""></a>
+                                 <a href="https://github.com/JuanPintoCruz/Pagina-de-Veterinaria" target="_blank" class="btn btn-sm btn-danger mx-2" style="border-radius: 15px;"> <h9>Ver codigo </h9> <img src="img/git.png" width="22" height="22" alt=""></a>
+                             </div>
+                             <br>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-3">
+            </div>
+            <div class="col-12 col-sm-3">
+            </div>
+            <div class="col-12 col-sm-3">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section >
+    <br><br> <br> <br> <br>
+  <div class="container">
+      <div class="row justify-content-center">
+          <h1 class="titulo2 text-center">Proyectos Personales</h1>
+          <br><br><br> <br>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="cuadro-2" >
+                  <div class="cuadro-3" style="background-color: rgb(28, 140, 231);">
+                      <br>
+                      <img src="img/proyecto-p/aplicacionempleados.png"  height="180vh"  width="90%" alt="">
+                      <br><br>
+                  </div>
+                  <br>
+                   <div class="cuadro-4">
+                      <br>
+                           <h7 class="parrafo" style="font-size: 22px;">
+                            Control de empleados de empresa <br>
+                              HTML CSS + PHP  JAVASCRIPT + BOOSTRAP. 
+                           </h7>
+                           <br><br>
+                           <div class="d-flex justify-content-center">
+                               <a href="https://github.com/JuanPintoCruz/SistemaEmpleados" target="_blank" class="btn btn-sm btn-danger mx-2" 
+                               style="border-radius: 15px;">  <h9>Ver codigo </h9> <img src="img/git.png" width="22" height="22" alt=""></a>
+                            </div>
+                            <br>
+                   </div>
+              </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="cuadro-2">
+                <div class="cuadro-3" style="background-color: rgb(28, 140, 231);">
+                      <br>
+                      <img src="img/proyecto-p/restaurante.png"  height="180vh" width="90%" alt="">
+                      <br> <br>
+                  </div>
+                      <br>
+                  <div class="cuadro-4">
+                      <br>
+                           <h7 class="parrafo" style="font-size: 22px;">
+                            Pagina web de Restaurante MVC <br>
+                              Html + PHP + CSS + JAVASCRIPT +BOOSTRAP
+                           </h7>
+                           <br><br>
+                        <div class="d-flex justify-content-center">
+                            <!-- <a href="https://vetfact.csifact.com/" class="btn btn-sm btn-primary mx-2" style="border-radius: 15px;"> <h9> Ver Pagina </h9> <img src="img/click.png" width="22" height="22" alt=""></a> -->
+                            <a href="https://github.com/JuanPintoCruz/PaginadeRestauranteAdministrativa" target="_blank" class="btn btn-sm btn-danger mx-2" style="border-radius: 15px;"> <h9>Ver codigo </h9> <img src="img/git.png" width="22" height="22" alt=""></a>
+                        </div>
+                        <br>
+                   </div>
+              </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="cuadro-2">
+                <div class="cuadro-3" style="background-color: rgb(28, 140, 231);">
+                      <br>
+                      <img src="img/proyecto-p/admin3.png" height="180vh"  width="90%" alt="">
+                      <br><br>
+                  </div>
+                  <div>
+                      <br>
+                      <!-- <a href="index.html" class="button-ver">Ver Pagina</a> -->
+                  </div>
+                  <div class="cuadro-4">
+                      <br>
+                           <h7 class="parrafo" style="font-size: 22px;">
+                              Sistema de Inventario Administrativo <br>
+                              HTML CSS + PHP + 
+                              JQuery + BOOSTRAP 
+                           </h7>
+                           <br><br>
+                        <div class="d-flex justify-content-center">
+                            <!-- <a href="https://vetfact.csifact.com/" class="btn btn-sm btn-primary mx-2" style="border-radius: 15px;"> <h9> Ver Pagina </h9> <img src="img/click.png" width="22" height="22" alt=""></a> -->
+                            <a href="https://github.com/JuanPintoCruz/Sistema-Inventario" target="_blank" class="btn btn-sm btn-danger mx-2" style="border-radius: 15px;"> <h9>Ver codigo </h9> <img src="img/git.png" width="22" height="22" alt=""></a>
+                        </div>
+                        <br>
+                   </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                 <div class="cuadro-2">
+                    <div class="cuadro-3" style="background-color: rgb(28, 140, 231);">
+                      <br>
+                      <img src="img/proyecto-p/robot1.png"  height="180vh" width="90%" alt="">
+                      <br> <br>
+                  </div>
+                  <br>
+                  <div class="cuadro-4">
+                    <br>
+                         <h7 class="parrafo" style="font-size: 22px;">
+                            Chat Boot Matemàtico <br>
+                             <br>
+                            Html + CSS + JAVASCRIPT
+                         </h7>
+                         <br><br>
+                         <div class="d-flex justify-content-center">
+                            <!-- <a href="https://vetfact.csifact.com/" class="btn btn-sm btn-primary mx-2" style="border-radius: 15px;"> <h9> Ver Pagina </h9> <img src="img/click.png" width="22" height="22" alt=""></a> -->
+                            <a href="https://github.com/JuanPintoCruz/ChatBott" target="_blank" class="btn btn-sm btn-danger mx-2" style="border-radius: 15px;"> <h9>Ver codigo </h9> <img src="img/git.png" width="22" height="22" alt=""></a>
+                        </div>
+                        <br>
+                 </div>
+              </div>
+          </div>
+          <div class="col-12  col-sm-6 col-md-6 col-lg-4">
+                <div class="cuadro-2">
+                  <div class="cuadro-3" style="background-color: rgb(28, 140, 231);">
+                      <br>
+                      <img src="img/proyecto-p/funeraria.JPG"  height="180vh" width="90%" alt="">
+                      <br> <br>
+                  </div>
+                  <br>
+                  <div class="cuadro-4">
+                    <br>
+                         <h7 class="parrafo" style="font-size: 22px;">
+                            Pagina web  de Funeraria <br>
+                            Html+CSS+JAVASCRIP<br>+PHP
+                         </h7>
+                         <br><br>
+                         <div class="d-flex justify-content-center">
+                            <!-- <a href="https://vetfact.csifact.com/" class="btn btn-sm btn-primary mx-2" style="border-radius: 15px;"> <h9> Ver Pagina </h9> <img src="img/click.png" width="22" height="22" alt=""></a> -->
+                            <a href="#" class="btn btn-sm btn-danger mx-2" style="border-radius: 15px;"> <h9>Ver codigo </h9> <img src="img/git.png" width="22" height="22" alt=""></a>
+                        </div>
+                        <br>
+                 </div>
+              </div> 
+          </div>
+      </div>
+  </div>
+  <br> <br>
+    <!-- diseño figma  -->
+       <!-- primer container -->
+ <div class="container">
+        <h1 class="titulo3 text-center">Diseño Figma</h1>
+        <br>
+    <!-- row -->
+    <div class="row justify-content-center">
+        <!-- <div class="col-md-2"></div> -->
+        <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+            <div class="cuadro-2 d-flex justify-content-center align-items-center" style="background-color: #F45252; height: 250px;">
+                <img src="img/FIGMA/FIGMA-APP-SENATI.JPG" style="height: 180px; width: 90%;" alt="">
+            </div>
+        </div>
+        <div class="col-12 col-sm-10 col-md-6 col-lg-4">
+            <div class="cuadro-2" style="background-color: rgb(246, 247, 251); height: 250px; display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="color:#e74c3c;">Diseño de aplicativo de SENATI.</h3>
+                <h5>Desarrollado en Figma el aplicativo de Senati que utilizan los alumnos en su momento estudiantil.</h5>
+                <div class="d-flex justify-content-center">
+                <a href="https://www.figma.com/design/kKSfzgF22UTwKWoDoXnj5K/APP-MOVIL?node-id=0-1&t=h5AqEAQcwfb0dL3I-0" target="_blank" class="btn btn-primary" style="border-radius: 15px; margin: 0;">
+                    <img src="img/click.png" width="22" height="22" alt="">Ver Diseño 
+                </a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-md-2"></div> -->
+    </div>
+    <!-- 1row -->
+    <br>
+    <!-- 2row -->
+    <div class="row justify-content-center">
+        <!-- <div class="col-md-2"></div> -->
+        <div class="col-12 col-sm-10 col-md-6 col-lg-4">
+            <div class="cuadro-2" style="background-color: rgb(246, 247, 251); height: 250px; display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="color:#e74c3c;">Diseño de Página Web de una Veterinaria.</h3>
+                <h5>Desarrolle el diseño de una pagina web de veterinarias en figma.</h5>
+                <div class="d-flex justify-content-center">
+                    <a href="https://www.figma.com/design/7DNZbakJwpijA9jK3IwJGG/Veterinaria?t=h5AqEAQcwfb0dL3I-0" target="_blank" class="btn btn-primary" style="border-radius: 15px; margin: 0;">
+                        <img src="img/click.png" width="22" height="22" alt="">Ver Diseño 
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-10 col-md-6 col-lg-4">
+            <div class="cuadro-2 d-flex justify-content-center align-items-center" style="background-color: #F45252; height: 250px;">
+                <img src="img/FIGMA/figma-veterinaria.JPG" style="height: 180px; width: 90%;" alt="">
+            </div>
+
+        </div>
+        <!-- <div class="col-md-2"></div> -->
+    </div>
+    <!-- 2row -->
+    <br>
+    <!-- 3row -->
+    <div class="row justify-content-center">
+        <!-- <div class="col-md-2"></div> -->
+        <div class="col-12 col-sm-10 col-md-6 col-lg-4">
+            <div class="cuadro-2 d-flex justify-content-center align-items-center" style="background-color: #F45252; height: 250px;">
+                <img src="img/FIGMA/PAGINA-PERSONAL.JPG" style="height: 180px; width: 90%;" alt="">
+            </div>
+        </div>
+        <div class="col-12 col-sm-10 col-md-6 col-lg-4">
+            <div class="cuadro-2" style="background-color: rgb(246, 247, 251); height: 250px; display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="color:#e74c3c;">Diseño de una pagina Estudiantil.</h3>
+                <h5>Desarrolle una pagina web para unos vender cursos virtuales.</h5>
+                <div class="d-flex justify-content-center">
+                <a href="https://www.figma.com/design/cul871DsWyVZk1HFJw4A4y/Untitled?node-id=0-1&t=Y1pPi9HQug9BilGn-0" target="_blank"
+                 class="btn btn-primary" style="border-radius: 15px; margin: 0;">
+                    <img src="img/click.png" width="22" height="22" alt="">Ver Diseño 
+                </a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-md-2"></div> -->
+    </div>
+    <!-- 3row -->    
+    <br>
+    <!-- 4row -->
+    <div class="row justify-content-center">
+        <!-- <div class="col-md-2"></div> -->
+        <div class="col-12 col-sm-10 col-md-6 col-lg-4">
+                <div class="cuadro-2" style="background-color: rgb(246, 247, 251); height: 250px; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="color:#e74c3c;">Diseño de un sistema de inventario.</h3>
+                    <h5>Desarrollado un diseño de un sistema para un inventario mas una pagina web.</h5>
+                 <div class="d-flex justify-content-center">
+                    <a href="https://www.figma.com/design/zs32AaL63BAV9xLR9jhUMX/Proyecto?node-id=0-1&t=JLxWJssLdHjVM4nD-0" target="_blank" class="btn btn-primary" style="border-radius: 15px; margin: 0;">
+                        <img src="img/click.png" width="22" height="22" alt="">Ver Diseño 
+                    </a>
+                 </div>
+        </div>
+        </div>
+        <div class="col-12 col-sm-10 col-md-6 col-lg-4">
+            <div class="cuadro-2 d-flex justify-content-center align-items-center" style="background-color: #F45252; height: 250px;">
+                <img src="img/FIGMA/inventario.png" style="height: 180px; width: 90%;" alt="">
+            </div>
+        </div>
+        <!-- <div class="col-md-2"></div> -->
+    </div>
+    <!-- 4row -->    
+ </div> <!-- container -->
+  
+  </div>
+</section>
+
+<br><br><br>
+<section class="contacto" id="contacto">
+    <br> <br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ">
+                <h2 class="text-center">Informacion Personal</h2>
+                <form>
+                    <div class="form-group text-center">
+                        <label for="nombre">Nombre: Juan Carlos </label>
+                    </div>
+                    <br>
+                    <div class="form-group text-center">
+                        <label for="apellido">Apellido: Pinto Cruz </label>
+                    </div>
+                    <br>
+                    <div class="form-group text-center">
+                        <label for="email">Email:juanpintocruz123@gmail.com</label>
+                    </div>
+                    <br>
+                    <div class="form-group text-center">
+                        <label for="mensaje">Lugar Donde Vivo: Ate -Vitarte-Santa Clara</label>
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <div class="col-md-6 ">
+                <h2 class="text-center">Contacto</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="nombre">Nombre y Apellido:</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+</section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>

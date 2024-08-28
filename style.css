@@ -1,0 +1,500 @@
+
+body, html, .container-fluid, nav {
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; 
+}
+/*  Navegador */
+nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #5DA2DA,#1976CC );
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+nav a {
+    font-weight: bold;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #00deef;
+    text-decoration: none;
+    font-size: 30px;
+    text-shadow: white;
+}
+/* Primer  Inicio */
+.inicio {
+    padding: 20px 0; 
+}
+.title-one {
+    color: #fff; /* Color del texto */ 
+    font-size: 25px; /* Tamaño de la fuente */
+    font-weight: bold; /* Hace el texto más grueso */
+    margin-bottom: 20px; /* Margen inferior */
+    text-shadow: 
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black; /* Sombra blanca para crear el borde */
+}
+.title-nombre {
+    color:rgb(223, 66, 66); 
+    font-size: 20px; 
+    margin-bottom: 20px;
+}
+
+.button {
+    margin-top: 20px; 
+}
+.button a {
+    padding: 10px 17px; 
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; 
+}
+.button a:hover {
+    background-color: #2a76c7; 
+}
+.img-juan{
+    width: 21vh;
+    height: 25vh;
+    border-radius: 10px;
+}
+.inicio{
+    background: linear-gradient(to bottom, #1976CC, #5DA2DA, #79B5E0 );
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
+    height: 50vh;
+    padding:  0 20px;
+    }
+/* robot */
+.box {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    height: 120px;
+    width: 100px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.box--img {
+    margin-right: 20px;
+    height: 250px;
+    width: 180px;
+}
+
+.box--button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background-color: #4267b2;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #dddfe2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    overflow: hidden;
+    transition: height 0.3s;
+    padding: 10px;
+}
+
+.open {
+    display: block;
+}
+
+.chat {
+    padding: 20px;
+}
+
+.options input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddfe2;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.options button {
+    display: block;
+    width: 100%;
+    background-color: #4267b2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.options button:hover {
+    background-color: #365899;
+}
+
+.chat p {
+    margin: 10px 0;
+}
+
+.cuadro-2 {
+    width: 100%; /* Ancho del cuadro */
+    background-color: rgb(246, 247, 251); /* Color de fondo */
+    border: 1px solid #999; /* Borde del cuadro */
+    text-align: center; /* Alineación del texto dentro del cuadro */
+    margin-bottom: 20px; /* Agrega margen en la parte inferior */
+}
+   
+
+@media (min-width: 1280px) {
+    .inicio{
+        height: 45vh;
+    }
+    .img-juan{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .inicio{
+        height: 55vh;
+    }
+    .img-juan{
+        width: 200px;
+        height: 200px;
+    }
+    .title-two{
+        font-size: 18px;
+    }
+}
+@media (max-width: 1024px) {
+    .inicio{
+        height: 70vh;
+    }
+    .title-two{
+        font-size: 17px;
+    }
+}
+@media (min-width: 920px) {
+    .inicio{
+        height: 50vh;
+    }
+    .img-juan{
+        width: 200px;
+        height: 200px;
+    }
+    .title-two{
+        font-size: 17px;
+    }
+}
+@media (max-width: 920px) {
+    .inicio{
+        height: 50vh;
+    }
+    .img-juan{
+        width: 200px;
+        height: 200px;
+    }
+    .title-two{
+        font-size: 17px;
+    }
+}
+@media (max-width: 912px) {
+    .inicio{
+        height: 55vh;
+    }
+    .img-juan{
+        width: 200px;
+        height: 200px;
+    }
+    .title-two{
+        font-size: 17px;
+    }
+}
+@media (max-width: 853px) {
+    .inicio{
+        height: 62vh;
+    }
+    .img-juan{
+        width: 180px;
+        height: 180px;
+    }
+}
+@media (max-width: 820px) {
+    .inicio{
+        height: 70vh;
+    }
+    .img-juan{
+        width: 180px;
+        height: 180px;
+    }
+    .title-two{
+        color: black;
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    nav a {
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+        margin: 5px; /* Reducir el espacio entre los elementos */
+    }
+    .inicio{
+        height: 70vh;
+    /* Elimina el clip-path */
+        clip-path: none; 
+    }
+    .title-two{
+        color: red;
+        font-size: 20px;
+    }
+}
+@media (min-width: 650px ) and (max-width:750px) {
+    nav a {
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+        margin: 5px; /* Reducir el espacio entre los elementos */
+    }
+    .inicio{
+        height: 70vh;
+    }
+    .title-two{
+        font-size: 20px;
+        clip-path: none; 
+    }
+}
+/* Media query para dispositivos móviles */
+@media (max-width: 430px) {
+    .box--img{
+        height: 140px;
+        width: 80px;
+    }
+}
+@media (max-width: 430px) {
+    nav a {
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+        margin: 5px; /* Reducir el espacio entre los elementos */
+    }
+    .inicio{
+        height: 75vh;
+        clip-path: none; /* Elimina el clip-path */
+    }
+    .title-two{
+        font-size: 20px;
+    }
+}
+@media (max-width: 414px) {
+    .inicio{
+        height: 82vh;
+        clip-path: none; /* Elimina el clip-path */
+    }
+    .title-two{
+        font-size: 20px;
+    }
+}
+@media (max-width: 390px) {
+    .inicio{
+        height: 80vh;
+        clip-path: none; /* Elimina el clip-path */
+    }
+    .title-two{
+        font-size: 18px;
+    }
+}
+@media (max-width: 375px) {
+    .inicio{
+        height: 120vh;
+        clip-path: none; /* Elimina el clip-path */
+    }
+    .title-two{
+        font-size: 18px;
+    }
+}
+@media (min-width: 350px) and (max-width:375px) {
+    .inicio{
+        height: 120vh;
+        clip-path: none; /* Elimina el clip-path */
+    }
+    .title-two{
+        font-size: 18px;
+    }
+}
+
+
+/* //section habilidades */
+#habilidades{
+    color: #f8f9fa;
+    background: linear-gradient(to bottom, #1976CC, #5DA2DA, #79B5E0 );
+}
+
+.load-bar {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    color: white;
+    padding: 2px;
+    font-size: 12px;
+    width: 100%;
+    margin: 4px;
+}
+
+
+.profile__skill-name{
+    color: white;
+}
+.load-bar__bar {
+    border: 1px solid black;
+    background-color: #48e;
+    border-radius: 10px;
+    padding: 4px 6px;
+}
+
+.bar--70 {
+    font-size: 12px;
+    color:white;
+    background: linear-gradient(to bottom, #FCB500, #FFD700);
+    width: 70%;
+}
+
+.bar--65 {
+    font-size: 12px;
+    color:white;
+    background: linear-gradient(to bottom, #1088F6, #00BFFF);
+    width: 65%;
+}
+
+.bar--60 {
+    font-size: 12px;
+    color:white;
+    background: linear-gradient(to bottom, #CD07FF, #DA70D6);
+    width: 60%;
+}
+
+.bar--55 {
+    font-size: 12px;
+    color:white;
+    background: linear-gradient(to bottom, #790E94, #8A2BE2);
+    width: 55%;
+}
+
+.bar--50 {
+    font-size: 12px;
+    color:white;
+    background: linear-gradient(to bottom, #F0FD59, #ADFF2F);
+    width: 50%;
+}
+
+.bar--52 {
+    font-size: 12px;
+    color:white;
+    background: linear-gradient(to bottom, #1DF38D, #32CD32);
+    width: 52%;
+}
+
+.bar--38 {
+    font-size: 12px;
+    color:white;
+    background: linear-gradient(to bottom, #8006FA, #8A2BE2);
+    width: 38%;
+}
+
+.bar--35 {
+    font-size: 12px;
+    color:white;
+    background: linear-gradient(to bottom, #F45252, #FF6347);
+    width: 35%;
+}
+
+.bar--48 {
+    font-size: 12px;
+    color:white;
+    background: linear-gradient(to bottom, #EDA0FA, #F8E067);
+    width: 48%;
+}
+
+
+@media (max-width: 540px) {
+    .load-bar {
+
+        width: 100%;
+    }
+}
+
+/* Proyectos Laborales  */
+.titulo1{
+    color: #48e;
+    font-weight: bold; /* Hace el texto más grueso */
+    font-size: 3em; /* Tamaño de fuente grande */
+    text-shadow: 
+    0 0 5px #89b9e5,  /* Sombra amarilla cercana */
+    0 0 10px #89b9e5, /* Sombra amarilla media */
+    0 0 15px #89b9e5, /* Sombra amarilla más alejada */
+    0 0 20px #89b9e5; /* Sombra amarilla más amplia */
+ }
+
+ .titulo2 {
+    color: rgb(17, 153, 231); /* Color del texto */
+    font-weight: bold; /* Hace el texto más grueso */
+    font-size: 3em; /* Tamaño de fuente grande */
+    text-shadow: 
+        0 0 5px rgb(162, 222, 230),  /* Sombra cercana */
+        0 0 10px rgb(162, 222, 230), /* Sombra media */
+        0 0 15px rgb(162, 222, 230), /* Sombra más alejada */
+        0 0 20px rgb(162, 222, 230); /* Sombra más amplia */
+}
+
+.titulo3{
+    color: red;
+    font-weight: bold; /* Hace el texto más grueso */
+    font-size: 3em; /* Tamaño de fuente grande */
+    text-shadow: 
+    0 0 5px yellow,  /* Sombra amarilla cercana */
+    0 0 10px yellow, /* Sombra amarilla media */
+    0 0 15px yellow, /* Sombra amarilla más alejada */
+    0 0 20px yellow; /* Sombra amarilla más amplia */
+ }
+
+.button-ver {
+    text-decoration: none;
+    border: 1px solid #007bff;
+    /* margin: 30px; */
+    color: white;
+    background-color: #48e;
+    padding: 10px 20px; /* Ajusta el relleno (padding) para hacerlo más grande horizontalmente y menos verticalmente */
+    border-radius: 10px; /* Agrega bordes redondeados para un aspecto más suave */
+}
+
+/* diseño figma */
+
+.contacto{
+    color: #f8f9fa;
+    background: linear-gradient(to bottom, #1976CC, #5DA2DA, #79B5E0 );
+}
+
+/* contacto */
+
+
